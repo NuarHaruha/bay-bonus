@@ -1,0 +1,9 @@
+.db{display:block}
+.muted{color:silver}
+.dn{display:none}
+#icon-bonus{
+    background: url('../img/bonus-32.png') no-repeat 0% 0%;
+}
+
+.status-active{color: green;}
+.status-inactive{color: red;}
