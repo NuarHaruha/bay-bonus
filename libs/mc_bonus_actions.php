@@ -12,6 +12,7 @@
  */	
 
 add_action('content-mc-bonus','manage_bonus_plans'); 
-add_action('content-bonusplan','mc_render_bonus_plan_page'); 
+add_action('content-bonusplan','mc_render_bonus_plan_page');
 
- 
+// on user registration
+add_action('user_register','member_register_downline_bonus');

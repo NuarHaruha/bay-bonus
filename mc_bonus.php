@@ -723,7 +723,7 @@ class mc_bonus
         $this->plugin_path  = plugin_dir_path(__FILE__);
         $this->plugin_libs  = $this->plugin_path.'libs/'; 
         
-        $includes = array('install','type','widgets','actions','plan');
+        $includes = array('install','type','widgets','actions','plan','affiliate');
         
         foreach($includes as $file){
             require_once $this->plugin_libs.self::OP_PREFIX.$file.'.php';

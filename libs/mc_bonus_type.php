@@ -50,6 +50,18 @@ final class BTYPE
     const ACT_DELETE                = 'deleteplan';
 
     const ACT_ADDNEW                = 'action-addnew';
+
+    const MSG_REGISTER_BONUS        = 'Direct Downline Registration Bonus for %s';
+
+    const MSG_STOCKIST_REGISTER_BONUS   = 'Stockist - Registration Bonus for %s';
+
+    const MEMBER_REGISTER_BONUS     = 20;
+
+    const BONUS_TYPE_RM             = 'RM';
+
+    const BONUS_TYPE_PV             = 'PV';
+
+    const BONUS_TYPE_PERCENT        = 'PERCENT';
     /**
      * callback for metadata function
      */
@@ -61,6 +73,7 @@ final class BTYPE
 
     const TRIGGER_PREFIX            = 'trigger_plan_';
 
+    const MK_SPONSOR_ID             = 'id_penaja';
     /**
      * use for redirect uri to
      * manage bonus plan page
@@ -75,6 +88,19 @@ final class BTYPE
         t('H1',$title);
         var_dump($args);
         if ($exit) exit();
+    }
+
+    /**
+     * @uses $wpdb wp database object
+     * @author Nuarharuha
+     * @since 0.1
+     *
+     * @param string $name const of BTYPE::DB_{$}
+     * @return string db table name with base prefix
+     */
+    public static function DB($name)
+    {   global $wpdb;
+        return $wpdb->base_prefix.$name;
     }
 
 }
