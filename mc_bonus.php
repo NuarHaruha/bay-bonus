@@ -434,7 +434,7 @@ class mc_bonus
         
         $table = $wpdb->base_prefix.BTYPE::DB_BONUS_PLAN;   
                 
-        $req  = foreach_push($req, $_POST); 
+        $req  = foreach_push(new stdClass(), $_POST);
         
         $cid  = _current_user_id();
         $pid  = $req->plan_id;
@@ -612,7 +612,7 @@ class mc_bonus
         
         $table = $wpdb->base_prefix.BTYPE::DB_BONUS_PLAN;   
                 
-        $req  = foreach_push($req, $_POST); 
+        $req  = foreach_push(new stdClass(), $_POST);
         
         $cid  = _current_user_id();
         
@@ -723,7 +723,7 @@ class mc_bonus
         $this->plugin_path  = plugin_dir_path(__FILE__);
         $this->plugin_libs  = $this->plugin_path.'libs/'; 
         
-        $includes = array('install','widgets','actions','plan'); 
+        $includes = array('install','type','widgets','actions','plan');
         
         foreach($includes as $file){
             require_once $this->plugin_libs.self::OP_PREFIX.$file.'.php';
