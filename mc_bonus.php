@@ -10,7 +10,6 @@ License: MIT License
 License URI: http://mdag.mit-license.org/
 */
 
-define('MC_DEBUG',1);
 
 /**
  * Bonus
@@ -18,8 +17,8 @@ define('MC_DEBUG',1);
  * @package     isralife
  * @category    bonus
  * 
- * @author      Nuarharuha 
- * @copyright   Copyright (C) 2012, Nuarharuha, MDAG Consultancy
+ * @author      Nuarharuha <nhnoah+bay-isra@gmail.com> 
+ * @copyright   Copyright (C) 2012, Nuarharuha <nhnoah+bay-isra@gmail.com>, MDAG Consultancy
  * @license     http://mdag.mit-license.org/ MIT License
  * @filesource  http://code.mdag.my/baydura_isralife/src
  * @version     0.1
@@ -162,7 +161,7 @@ class mc_bonus
      * 
      * Constructor, the actual setting up of the class properties
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  public 
      * 
@@ -193,7 +192,7 @@ class mc_bonus
      * register global hooks & filters
      * define base configuration settings
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  private
      */    
@@ -213,7 +212,7 @@ class mc_bonus
      * register global hooks & filters
      * for admin page
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  private
      */    
@@ -231,7 +230,7 @@ class mc_bonus
      * 
      * register admin menus & subpage
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */     
@@ -267,7 +266,7 @@ class mc_bonus
      * 
      * register admin menus & subpage
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */      
@@ -289,7 +288,7 @@ class mc_bonus
      * 
      * load admin panel page
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */
@@ -329,7 +328,7 @@ class mc_bonus
      * 
      * set admin page stylesheet, scripts & metabox 
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  private
      */      
@@ -350,7 +349,7 @@ class mc_bonus
      * call on load-$hook
 	 * This calls the add_meta_boxes hooks, adds screen options and enqueues the postbox.js script.   
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */       
@@ -378,7 +377,7 @@ class mc_bonus
      * 
      * save all settings method
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */
@@ -425,7 +424,7 @@ class mc_bonus
      * 
      * save all settings method
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */
@@ -601,7 +600,7 @@ class mc_bonus
      * save bonus plan
      * @uses    $wpdb
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */     
@@ -681,7 +680,7 @@ class mc_bonus
      * 
      * register plugin page stylsheets
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */     
@@ -698,7 +697,7 @@ class mc_bonus
      * 
      * enqueue plugin stylsheets on admin_head
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   1.0.0
      * @access  public
      */         
@@ -713,7 +712,7 @@ class mc_bonus
      * 
      * set plugin path & options
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  private
      */    
@@ -723,7 +722,7 @@ class mc_bonus
         $this->plugin_path  = plugin_dir_path(__FILE__);
         $this->plugin_libs  = $this->plugin_path.'libs/'; 
         
-        $includes = array('install','type','widgets','actions','plan','affiliate');
+        $includes = array('install','type','widgets','actions','plan','affiliate','products');
         
         foreach($includes as $file){
             require_once $this->plugin_libs.self::OP_PREFIX.$file.'.php';
@@ -739,7 +738,7 @@ class mc_bonus
      * 
      * save transaction
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  private
      * 
@@ -776,7 +775,7 @@ class mc_bonus
      * 
      * check if user ID is valid
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  private
      */     
@@ -796,7 +795,7 @@ class mc_bonus
      * 
      * @uses    $wpdb WordPress database object for queries.
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  public
      * 
@@ -827,7 +826,7 @@ class mc_bonus
      * 
      * @uses    $wpdb WordPress database object for queries.
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  public
      * 
@@ -857,7 +856,7 @@ class mc_bonus
      * 
      * @uses    $wpdb WordPress database object for queries.
      * 
-     * @author  Nuarharuha
+     * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since   0.1
      * @access  public
      * 

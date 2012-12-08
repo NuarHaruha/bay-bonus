@@ -5,9 +5,9 @@
  * @package isralife
  * @category bonus
  * 
- * @copyright Copyright (c) 2012. Nuarharuha, MDAG Consultancy
+ * @copyright Copyright (c) 2012. Nuarharuha <nhnoah+bay-isra@gmail.com>, MDAG Consultancy
  * @license http://mdag.mit-license.org MIT License
- * @author  Nuarharuha
+ * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
  * @version 0.1
  */	
 

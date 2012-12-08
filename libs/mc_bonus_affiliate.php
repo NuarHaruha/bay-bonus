@@ -5,8 +5,8 @@
  * @package     isralife
  * @category    bonus
  *
- * @author      Nuarharuha
- * @copyright   Copyright (C) 2012, Nuarharuha, MDAG Consultancy
+ * @author      Nuarharuha <nhnoah+bay-isra@gmail.com>
+ * @copyright   Copyright (C) 2012, Nuarharuha <nhnoah+bay-isra@gmail.com>, MDAG Consultancy
  * @license     http://mdag.mit-license.org/ MIT License
  * @filesource  http://code.mdag.my/baydura_isralife/src
  * @version     0.1
@@ -104,4 +104,24 @@ function get_affiliate_bonus($uid){
     $sql = "SELECT * FROM $db WHERE bonus_uid=%d";
 
     return $wpdb->get_results($wpdb->prepare($sql, $uid));
+}
+
+function get_bonus_rm($uid){
+    global $wpdb;
+
+    $db = BTYPE::DB(BTYPE::DB_PRIMARY);
+
+    $sql = "SELECT * FROM $db WHERE bonus_uid=%d AND bonus_type=%s ORDER BY `bonus_id` DESC";
+
+    return $wpdb->get_results($wpdb->prepare($sql, $uid, BTYPE::BONUS_TYPE_RM));
+}
+
+function get_bonus_pv($uid){
+    global $wpdb;
+
+    $db = BTYPE::DB(BTYPE::DB_PRIMARY);
+
+    $sql = "SELECT * FROM $db WHERE bonus_uid=%d AND bonus_type=%s ORDER BY `bonus_id` DESC";
+
+    return $wpdb->get_results($wpdb->prepare($sql, $uid, BTYPE::BONUS_TYPE_PV));
 }

@@ -5,8 +5,8 @@
  * @package     isralife
  * @category    bonus
  *
- * @author      Nuarharuha
- * @copyright   Copyright (C) 2012, Nuarharuha, MDAG Consultancy
+ * @author      Nuarharuha <nhnoah+bay-isra@gmail.com>
+ * @copyright   Copyright (C) 2012, Nuarharuha <nhnoah+bay-isra@gmail.com>, MDAG Consultancy
  * @license     http://mdag.mit-license.org/ MIT License
  * @filesource  http://code.mdag.my/baydura_isralife/src
  * @version     0.1
@@ -55,6 +55,8 @@ final class BTYPE
 
     const MSG_STOCKIST_REGISTER_BONUS   = 'Stockist - Registration Bonus for %s';
 
+    const MSG_PRODUCTS_PV_BONUS     = 'Product Purchase Bonus for item %s, ref:%s';
+
     const MEMBER_REGISTER_BONUS     = 20;
 
     const BONUS_TYPE_RM             = 'RM';
@@ -92,7 +94,7 @@ final class BTYPE
 
     /**
      * @uses $wpdb wp database object
-     * @author Nuarharuha
+     * @author Nuarharuha <nhnoah+bay-isra@gmail.com>
      * @since 0.1
      *
      * @param string $name const of BTYPE::DB_{$}
