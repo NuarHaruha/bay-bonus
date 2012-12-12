@@ -18,9 +18,14 @@ function add_product_pv_bonus($uid, $sku, $invoice_id, $amount){
 
     $db     = BTYPE::DB(BTYPE::DB_PRIMARY);
 
+    $iid = explode('-', $invoice_id);
+    $iid = $iid[1];
+
+    $invoice = _t('a',$invoice_id, array('href'=>"/purchase/checkout-complete/?get_invoice=$iid&ordered_by=$uid&view_invoice=1"));
+
     $meta = array(
         'bonus_uid'     => $uid,
-        'bonus_title'   => sprintf(BTYPE::MSG_PRODUCTS_PV_BONUS, $sku, $invoice_id),
+        'bonus_title'   => sprintf(BTYPE::MSG_PRODUCTS_PV_BONUS, $sku, $invoice),
         'bonus_type'    => BTYPE::BONUS_TYPE_PV,
         'bonus_value'   => $amount,
         'timestamp'     => BTYPE::DTIME()
