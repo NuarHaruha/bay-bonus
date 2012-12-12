@@ -5,7 +5,7 @@
  * run on plugin active
  * 
  * @author  Nuarharuha <nhnoah+bay-isra@gmail.com>
- * @since   1.4
+ * @since   1.5
  * @return  void
  */	
 function mc_bonus_install_db(){
@@ -14,7 +14,7 @@ function mc_bonus_install_db(){
     $db = $primary_db = $wpdb->base_prefix.BTYPE::DB_PRIMARY; 
 
 	if($wpdb->get_var("SHOW TABLES LIKE '".$db."'") != $db 
-    || (float) get_option(mc_bonus::OP_PREFIX.'db_version') < 1.4) 
+    || (float) get_option(mc_bonus::OP_PREFIX.'db_version') < 1.5)
     {
 	   /**
 	    * used KEY instead of INDEX for adding
@@ -28,9 +28,11 @@ function mc_bonus_install_db(){
 			  bonus_type VARCHAR(5) NOT NULL,              
 			  bonus_value BIGINT(20) NOT NULL,
 			  timestamp BIGINT(20) NOT NULL,
+			  date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 			  PRIMARY KEY bonus_id (bonus_id),
               KEY bonus_uid (bonus_uid),
-              KEY bonus_type (bonus_type)
+              KEY bonus_type (bonus_type),
+              KEY date (date)
 			) ENGINE=INNODB;";
             
           
